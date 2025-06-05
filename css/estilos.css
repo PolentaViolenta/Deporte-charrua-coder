@@ -132,7 +132,7 @@ footer .social-icons img:hover {
 .galeria-horizontal {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
   padding: 20px;
