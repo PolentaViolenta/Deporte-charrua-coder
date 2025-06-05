@@ -5,3 +5,67 @@
     border-radius: 10px;
   }
 }
+.galeria-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+
+  .slider {
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .img {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .controles {
+      margin-top: 10px;
+
+      label {
+        display: none;
+        font-size: 2rem;
+        background: #eee;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background: #ccc;
+        }
+      }
+    }
+
+    @for $i from 1 through 7 {
+      #ff#{$i}:checked ~ .ff#{$i} {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      #ff#{$i}:checked ~ .controles .ff#{$i} {
+        display: inline-block;
+      }
+    }
+  }
+
+  .imagen-fija {
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+}

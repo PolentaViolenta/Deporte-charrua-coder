@@ -54,8 +54,7 @@ header nav a:hover {
 
 .botonlogo {
   height: 100px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 main {
@@ -130,6 +129,108 @@ footer .social-icons img:hover {
   border-radius: 10px;
 }
 
+.galeria-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.galeria-horizontal .slider {
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+.galeria-horizontal .slider input[type=radio] {
+  display: none;
+}
+.galeria-horizontal .slider .img {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.galeria-horizontal .slider .controles {
+  margin-top: 10px;
+}
+.galeria-horizontal .slider .controles label {
+  display: none;
+  font-size: 2rem;
+  background: #eee;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.galeria-horizontal .slider .controles label:hover {
+  background: #ccc;
+}
+.galeria-horizontal .slider #ff1:checked ~ .ff1 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff1:checked ~ .controles .ff1 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff2:checked ~ .ff2 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff2:checked ~ .controles .ff2 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff3:checked ~ .ff3 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff3:checked ~ .controles .ff3 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff4:checked ~ .ff4 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff4:checked ~ .controles .ff4 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff5:checked ~ .ff5 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff5:checked ~ .controles .ff5 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff6:checked ~ .ff6 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff6:checked ~ .controles .ff6 {
+  display: inline-block;
+}
+.galeria-horizontal .slider #ff7:checked ~ .ff7 {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.galeria-horizontal .slider #ff7:checked ~ .controles .ff7 {
+  display: inline-block;
+}
+.galeria-horizontal .imagen-fija {
+  width: 40%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -146,4 +247,6 @@ footer .social-icons img:hover {
   background-color: rgba(255, 250, 240, 0.85);
   padding: 20px;
   border-radius: 10px;
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+/*# sourceMappingURL=estilos.css.map */
