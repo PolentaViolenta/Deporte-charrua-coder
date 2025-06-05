@@ -230,6 +230,19 @@ footer .social-icons img:hover {
   border-radius: 12px;
   object-fit: contain;
 }
+@media (max-width: 768px) {
+  .galeria-horizontal {
+    flex-direction: column;
+  }
+  .galeria-horizontal .imagen-fija {
+    width: 100%;
+    max-width: 400px;
+  }
+  .galeria-horizontal .slider {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 .form-container {
   display: flex;
