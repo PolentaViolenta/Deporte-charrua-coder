@@ -148,10 +148,13 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider .img {
   display: none;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  object-fit: cover;
+  transform: scale(0.9) rotateY(5deg);
+  transition: opacity 0.6s ease, transform 0.6s ease box-shadow none;
+  filter: brightness(0, 9);
 }
 .galeria-horizontal .slider .controles {
   margin-top: 10px;
@@ -171,7 +174,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff1:checked ~ .ff1 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff1:checked ~ .controles .ff1 {
   display: inline-block;
@@ -179,7 +184,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff2:checked ~ .ff2 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff2:checked ~ .controles .ff2 {
   display: inline-block;
@@ -187,7 +194,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff3:checked ~ .ff3 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff3:checked ~ .controles .ff3 {
   display: inline-block;
@@ -195,7 +204,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff4:checked ~ .ff4 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff4:checked ~ .controles .ff4 {
   display: inline-block;
@@ -203,7 +214,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff5:checked ~ .ff5 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff5:checked ~ .controles .ff5 {
   display: inline-block;
@@ -211,7 +224,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff6:checked ~ .ff6 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff6:checked ~ .controles .ff6 {
   display: inline-block;
@@ -219,7 +234,9 @@ footer .social-icons img:hover {
 .galeria-horizontal .slider #ff7:checked ~ .ff7 {
   display: block;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 .galeria-horizontal .slider #ff7:checked ~ .controles .ff7 {
   display: inline-block;
