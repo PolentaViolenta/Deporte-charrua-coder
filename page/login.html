@@ -18,17 +18,20 @@
             </ul>
         </nav>
     </header>
-    <main>  <!--Formulario-->
+    <main>
+      <section class="login">
+  <h2>Iniciar Sesión</h2>
+  <p>Ingresá tus datos para acceder a tu cuenta.</p>
+  <form action="#" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
 
-        <form class="form-container">
-            <label for="">Email:</label>
-            <input id="email" type="email" required>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required>
 
-            <label for="password">Contraseña</label>
-            <input id="password" type="password" required>
-    
-            <input type="submit" value="Iniciar Sesion">
-        </form>
+    <button type="submit">Entrar</button>
+  </form>
+  <p>¿No tenés cuenta? <a href="#">Registrate aquí</a></p>
     </main>
 </body>
 
