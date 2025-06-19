@@ -138,165 +138,192 @@ footer .social-icons img:hover {
   border: none;
 }
 
-.page-basquetbol .contenido {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 10px;
+.basquetbol-page {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
 }
-
-.jugadores {
+.basquetbol-page section {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.basquetbol-page section h2 {
+  background-color: #0055aa;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.basquetbol-page section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.basquetbol-page section .jugadores {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   margin-top: 20px;
 }
-
-.jugador {
+.basquetbol-page section .jugadores .jugador {
+  flex: 1 1 250px;
   text-align: center;
-  max-width: 200px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.jugador img {
+.basquetbol-page section .jugadores .jugador img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.basquetbol-page section table {
   width: 100%;
-  border-radius: 10px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.basquetbol-page section table th, .basquetbol-page section table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+.basquetbol-page section table th {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: bold;
+}
+.basquetbol-page section table tr:hover {
+  background-color: #f0fdf4;
 }
 
-.page-futbol .contenido {
-  background-color: rgba(240, 255, 240, 0.85);
-  padding: 20px;
+.futbol-page main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.futbol-page main .contenido {
+  background-color: #ffffff;
+  padding: 1.5rem;
   border-radius: 10px;
 }
-
-.galeria-horizontal {
+.futbol-page main .contenido h2 {
+  margin-top: 0;
+}
+.futbol-page main .contenido ul {
+  margin-left: 1.5rem;
+}
+.futbol-page main .contenido ul li {
+  margin-bottom: 0.5rem;
+}
+.futbol-page main .jugadores-destacados {
+  text-align: center;
+}
+.futbol-page main .jugadores-destacados .jugadores {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  gap: 2rem;
   flex-wrap: wrap;
-  padding: 20px;
 }
-.galeria-horizontal .slider {
-  position: relative;
-  max-width: 600px;
+.futbol-page main .jugadores-destacados .jugadores .jugador {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+.futbol-page main .jugadores-destacados .jugadores .jugador img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.futbol-page main .jugadores-destacados .jugadores .jugador p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.futbol-page main .tabla-jugadores,
+.futbol-page main .tabla-posiciones {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.futbol-page main .tabla-jugadores table,
+.futbol-page main .tabla-posiciones table {
+  width: 100%;
+  border-collapse: collapse;
   text-align: center;
 }
-.galeria-horizontal .slider input[type=radio] {
-  display: none;
+.futbol-page main .tabla-jugadores table th,
+.futbol-page main .tabla-jugadores table td,
+.futbol-page main .tabla-posiciones table th,
+.futbol-page main .tabla-posiciones table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
 }
-.galeria-horizontal .slider .img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  opacity: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: scale(0.9) rotateY(5deg);
-  transition: opacity 0.6s ease, transform 0.6s ease box-shadow none;
-  filter: brightness(0, 9);
+.futbol-page main .tabla-jugadores table th,
+.futbol-page main .tabla-posiciones table th {
+  background-color: #ddd;
 }
-.galeria-horizontal .slider .controles {
-  margin-top: 10px;
-}
-.galeria-horizontal .slider .controles label {
-  display: none;
-  font-size: 2rem;
-  background: #eee;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.galeria-horizontal .slider .controles label:hover {
-  background: #ccc;
-}
-.galeria-horizontal .slider #ff1:checked ~ .ff1 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff1:checked ~ .controles .ff1 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff2:checked ~ .ff2 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff2:checked ~ .controles .ff2 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff3:checked ~ .ff3 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff3:checked ~ .controles .ff3 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff4:checked ~ .ff4 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff4:checked ~ .controles .ff4 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff5:checked ~ .ff5 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff5:checked ~ .controles .ff5 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff6:checked ~ .ff6 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff6:checked ~ .controles .ff6 {
-  display: inline-block;
-}
-.galeria-horizontal .slider #ff7:checked ~ .ff7 {
-  display: block;
-  opacity: 1;
-  transform: scale(1) rotateY(0);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-}
-.galeria-horizontal .slider #ff7:checked ~ .controles .ff7 {
-  display: inline-block;
-}
-.galeria-horizontal .imagen-fija {
-  width: 40%;
-  height: auto;
-  border-radius: 12px;
-  -o-object-fit: contain;
-     object-fit: contain;
+.futbol-page main .tabla-jugadores table tr:nth-child(even),
+.futbol-page main .tabla-posiciones table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 @media (max-width: 768px) {
-  .galeria-horizontal {
+  .futbol-page main {
+    padding: 1rem;
+  }
+  .futbol-page main .jugadores-destacados .jugadores {
     flex-direction: column;
+    align-items: center;
   }
-  .galeria-horizontal .imagen-fija {
-    width: 100%;
-    max-width: 400px;
+  .futbol-page main .jugadores-destacados .jugadores .jugador {
+    width: 90%;
   }
-  .galeria-horizontal .slider {
-    width: 100%;
-    max-width: 100%;
+  .futbol-page main .tabla-jugadores,
+  .futbol-page main .tabla-posiciones {
+    padding: 1rem;
+  }
+  .futbol-page main .tabla-jugadores table,
+  .futbol-page main .tabla-posiciones table {
+    font-size: 0.9rem;
+  }
+  .futbol-page main .tabla-jugadores table th,
+  .futbol-page main .tabla-jugadores table td,
+  .futbol-page main .tabla-posiciones table th,
+  .futbol-page main .tabla-posiciones table td {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .futbol-page main .contenido {
+    padding: 1rem;
+  }
+  .futbol-page main .contenido h2 {
+    font-size: 1.2rem;
+  }
+  .futbol-page main .contenido ul {
+    font-size: 0.95rem;
+  }
+  .futbol-page main .jugadores-destacados h2,
+  .futbol-page main .tabla-jugadores h2,
+  .futbol-page main .tabla-posiciones h2 {
+    font-size: 1.2rem;
+  }
+  .futbol-page main .tabla-jugadores table,
+  .futbol-page main .tabla-posiciones table {
+    font-size: 0.85rem;
   }
 }
 

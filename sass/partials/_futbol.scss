@@ -1,87 +1,141 @@
-.page-futbol {
-  .contenido {
-    background-color: rgba(240, 255, 240, 0.85);
-    padding: 20px;
-    border-radius: 10px;
-  }
-}
-.galeria-horizontal {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 20px;
+.futbol-page {
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
-  .slider {
-    position: relative;
-    max-width: 600px;
-    text-align: center;
-
-    input[type="radio"] {
-      display: none;
-    }
-
-    .img {
-      display: none;
-      width: 100%;
-      height: 100%;
+    .contenido {
+      background-color: #ffffff;
+      padding: 1.5rem;
       border-radius: 10px;
-      opacity: 0;
-      object-fit: cover;
-      transform: scale(0.9) rotateY(5deg);
-      transition: opacity 0.6s ease, transform 0.6s ease box-shadow none;
-      filter: brightness(0,9);
-    }
 
-    .controles {
-      margin-top: 10px;
+      h2 {
+        margin-top: 0;
+      }
 
-      label {
-        display: none;
-        font-size: 2rem;
-        background: #eee;
-        padding: 10px 20px;
-        margin: 0 10px;
-        border-radius: 8px;
-        cursor: pointer;
+      ul {
+        margin-left: 1.5rem;
 
-        &:hover {
-          background: #ccc;
+        li {
+          margin-bottom: 0.5rem;
         }
       }
     }
 
-    @for $i from 1 through 7 {
-      #ff#{$i}:checked ~ .ff#{$i} {
-        display: block;
-        opacity: 1;
-        transform: scale(1) rotateY(0);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-      }
+    .jugadores-destacados {
+      text-align: center;
 
-      #ff#{$i}:checked ~ .controles .ff#{$i} {
-        display: inline-block;
+      .jugadores {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .jugador {
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 1rem;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          width: 200px;
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .tabla-jugadores,
+    .tabla-posiciones {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+
+        th,
+        td {
+          border: 1px solid #ccc;
+          padding: 0.75rem;
+        }
+
+        th {
+          background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
       }
     }
   }
 
-  .imagen-fija {
-    width: 40%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: contain;
-  }
+  // 🔽 MEDIA QUERIES 🔽
   @media (max-width: 768px) {
-    flex-direction: column;
-    .imagen-fija{
-        width: 100%;
-        max-width: 400px;
+    main {
+      padding: 1rem;
+
+      .jugadores-destacados .jugadores {
+        flex-direction: column;
+        align-items: center;
+
+        .jugador {
+          width: 90%;
+        }
+      }
+
+      .tabla-jugadores,
+      .tabla-posiciones {
+        padding: 1rem;
+
+        table {
+          font-size: 0.9rem;
+
+          th,
+          td {
+            padding: 0.5rem;
+          }
+        }
+      }
     }
-    .slider{
-        width: 100%;
-        max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    main {
+      .contenido {
+        padding: 1rem;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          font-size: 0.95rem;
+        }
+      }
+
+      .jugadores-destacados h2,
+      .tabla-jugadores h2,
+      .tabla-posiciones h2 {
+        font-size: 1.2rem;
+      }
+
+      .tabla-jugadores table,
+      .tabla-posiciones table {
+        font-size: 0.85rem;
+      }
     }
   }
 }

@@ -1,84 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>futbol</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fútbol</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
 </head>
-<body>
-    <header>
-        <div class="header-contain">
-            <nav>
-                <ul>
-                    <li><a href="../index.html"><img class="botonlogo"  src="../medios/logo.png" alt="Logo de la Página"> </a></li>
-                    <li><a href="#" class="nav-link">Fútbol</a></li>
-                    <li><a href="./basquetbol.html" class="nav-link">Basquetbol</a></li>
-                    <li><a href="./rugby.html" class="nav-link">Rugby</a></li>
-                    <li><a class="iniciarsesion" href="./login.html">Iniciar Sesion</a></li>
-                </ul>
-            </nav>
+<body class="futbol-page">
+  <header class="header-contain">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html"><img class="botonlogo" src="../medios/logo.png" alt="Site logo" /></a></li>
+        <li><a href="#" class="nav-link active">Fútbol</a></li>
+        <li><a href="./basquetbol.html" class="nav-link">Básquetbol</a></li>
+        <li><a href="./rugby.html" class="nav-link">Rugby</a></li>
+        <li><a class="iniciarsesion" href="./login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenido">
+      <h2>Historia del Fútbol</h2>
+      <p>El fútbol se originó en Inglaterra en el siglo XIX. Es el deporte más popular del mundo, jugado y seguido por millones de personas.</p>
+
+      <h2>Reglas Básicas</h2>
+      <ul>
+        <li>11 jugadores por equipo, incluyendo un portero.</li>
+        <li>Dos tiempos de 45 minutos cada uno.</li>
+        <li>El objetivo del juego es marcar más goles que el oponente.</li>
+      </ul>
+    </section>
+
+    <section class="jugadores-destacados">
+      <h2>Selecciones Históricas</h2>
+      <div class="jugadores">
+        <div class="jugador">
+          <img src="../medios/brasil.jpg" alt="Equipo de Brasil" />
+          <p><strong>Verdeamarelha</strong> - Brasil, ícono mundial del fútbol.</p>
         </div>
-    </header>
-    <main>
-  <div class="galeria-horizontal">
-    <div class="slider">
-      <input type="radio" name="galeria" id="ff1" checked>
-      <input type="radio" name="galeria" id="ff2">
-      <input type="radio" name="galeria" id="ff3">
-      <input type="radio" name="galeria" id="ff4">
-      <input type="radio" name="galeria" id="ff5">
-      <input type="radio" name="galeria" id="ff6">
-      <input type="radio" name="galeria" id="ff7">
-
-      <img src="../medios/ff1.jpg" class="img ff1">
-      <img src="../medios/ff2.jpg" class="img ff2">
-      <img src="../medios/ff3.jpg" class="img ff3">
-      <img src="../medios/ff4.jpg" class="img ff4">
-      <img src="../medios/ff5.jpg" class="img ff5">
-      <img src="../medios/ff6.jpg" class="img ff6">
-      <img src="../medios/ff7.jpg" class="img ff7">
-
-      <div class="controles">
-        <label for="ff7" class="prev ff1">←</label>
-        <label for="ff2" class="next ff1">→</label>
-
-        <label for="ff1" class="prev ff2">←</label>
-        <label for="ff3" class="next ff2">→</label>
-
-        <label for="ff2" class="prev ff3">←</label>
-        <label for="ff4" class="next ff3">→</label>
-
-        <label for="ff3" class="prev ff4">←</label>
-        <label for="ff5" class="next ff4">→</label>
-
-        <label for="ff4" class="prev ff5">←</label>
-        <label for="ff6" class="next ff5">→</label>
-
-        <label for="ff5" class="prev ff6">←</label>
-        <label for="ff7" class="next ff6">→</label>
-
-        <label for="ff6" class="prev ff7">←</label>
-        <label for="ff1" class="next ff7">→</label>
+        <div class="jugador">
+          <img src="../medios/celeste.jpg" alt="Equipo de Uruguay" />
+          <p><strong>La celeste</strong> - Uruguay, primera selección campeona del mundo.</p>
+        </div>
       </div>
+    </section>
+
+    <section class="tabla-jugadores">
+      <h2>Mejores Jugadores de la Temporada</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jugador</th>
+            <th>País</th>
+            <th>Goles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luis Suárez</td>
+            <td>Uruguay</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>Lionel Messi</td>
+            <td>Argentina</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Kylian Mbappé</td>
+            <td>Francia</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="tabla-posiciones">
+      <h2>Tabla de Posiciones - Selecciones</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Posición</th>
+            <th>Selección</th>
+            <th>PJ</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Argentina</td>
+            <td>6</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Brasil</td>
+            <td>6</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Uruguay</td>
+            <td>6</td>
+            <td>13</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Seguinos</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="../medios/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../medios/instagram.png" alt="Instagram" /></a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img src="../medios/twitter.png" alt="Twitter" /></a>
     </div>
-    <img src="../medios/fp.png" class="imagen-fija">
-  </div>
-</main>
-    <footer>
-        <h2>Seguinos</h2>
-        <div class="social-icons">
-          <a href="https://www.facebook.com" target="_blank">
-            <img src="../medios/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com" target="_blank">
-            <img src="../medios/instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.x.com" target="_blank">
-            <img src="../medios/twitter.png" alt="Twitter">
-          </a>
-        </div>
-    </footer>
-    
+  </footer>
 </body>
 </html>
