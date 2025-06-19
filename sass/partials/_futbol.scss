@@ -23,16 +23,16 @@
       }
     }
 
-    .jugadores-destacados {
+    .selecciones-destacadas {
       text-align: center;
 
-      .jugadores {
+      .selecciones {
         display: flex;
         justify-content: center;
         gap: 2rem;
         flex-wrap: wrap;
 
-        .jugador {
+        .seleccion {
           background-color: #ffffff;
           border-radius: 10px;
           padding: 1rem;
@@ -82,16 +82,49 @@
     }
   }
 
-  // 🔽 MEDIA QUERIES 🔽
+  .tablas-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+
+      .tabla-jugadores,
+      .tabla-posiciones {
+        flex: 1;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        overflow-x: auto;
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+
+          th,
+          td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+          }
+
+          th {
+            background-color: #ddd;
+          }
+
+          tr:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+        }
+      }
+    }
+  }
   @media (max-width: 768px) {
     main {
       padding: 1rem;
 
-      .jugadores-destacados .jugadores {
+      .selecciones-destacadas{
         flex-direction: column;
         align-items: center;
-
-        .jugador {
+          .selecciones{
           width: 90%;
         }
       }
@@ -126,7 +159,7 @@
         }
       }
 
-      .jugadores-destacados h2,
+      .slecciones-destacadas h2,
       .tabla-jugadores h2,
       .tabla-posiciones h2 {
         font-size: 1.2rem;
@@ -138,4 +171,11 @@
       }
     }
   }
-}
+  @media (max-width: 768px) {
+    main {
+      .tablas-container {
+        flex-direction: column;
+      }
+    }
+  }
+

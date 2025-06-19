@@ -138,75 +138,165 @@ footer .social-icons img:hover {
   border: none;
 }
 
-.basquetbol-page {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
-}
-.basquetbol-page section {
-  margin: 40px auto;
-  padding: 30px;
-  max-width: 1000px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-.basquetbol-page section h2 {
-  background-color: #0055aa;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-.basquetbol-page section ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-.basquetbol-page section .jugadores {
+.basquetbol-page main {
+  padding: 2rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 2rem;
 }
-.basquetbol-page section .jugadores .jugador {
-  flex: 1 1 250px;
-  text-align: center;
-  background-color: #f4f4f4;
+.basquetbol-page main .contenido {
+  background-color: #ffffff;
+  padding: 1.5rem;
   border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.basquetbol-page section .jugadores .jugador img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.basquetbol-page main .contenido h2 {
+  margin-top: 0;
 }
-.basquetbol-page section table {
+.basquetbol-page main .contenido ul {
+  margin-left: 1.5rem;
+}
+.basquetbol-page main .contenido ul li {
+  margin-bottom: 0.5rem;
+}
+.basquetbol-page main .selecciones-destacadas {
+  text-align: center;
+}
+.basquetbol-page main .selecciones-destacadas .selecciones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.basquetbol-page main .selecciones-destacadas .selecciones .seleccion {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+.basquetbol-page main .selecciones-destacadas .selecciones .seleccion img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.basquetbol-page main .selecciones-destacadas .selecciones .seleccion p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.basquetbol-page main .tabla-jugadores,
+.basquetbol-page main .tabla-posiciones {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.basquetbol-page main .tabla-jugadores table,
+.basquetbol-page main .tabla-posiciones table {
   width: 100%;
   border-collapse: collapse;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-.basquetbol-page section table th, .basquetbol-page section table td {
-  border: 1px solid #ddd;
-  padding: 12px;
   text-align: center;
 }
-.basquetbol-page section table th {
-  background-color: #d1fae5;
-  color: #065f46;
-  font-weight: bold;
+.basquetbol-page main .tabla-jugadores table th,
+.basquetbol-page main .tabla-jugadores table td,
+.basquetbol-page main .tabla-posiciones table th,
+.basquetbol-page main .tabla-posiciones table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
 }
-.basquetbol-page section table tr:hover {
-  background-color: #f0fdf4;
+.basquetbol-page main .tabla-jugadores table th,
+.basquetbol-page main .tabla-posiciones table th {
+  background-color: #ddd;
+}
+.basquetbol-page main .tabla-jugadores table tr:nth-child(even),
+.basquetbol-page main .tabla-posiciones table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.basquetbol-page .tablas-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.basquetbol-page .tablas-container .tabla-jugadores,
+.basquetbol-page .tablas-container .tabla-posiciones {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.basquetbol-page .tablas-container .tabla-jugadores table,
+.basquetbol-page .tablas-container .tabla-posiciones table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.basquetbol-page .tablas-container .tabla-jugadores table th,
+.basquetbol-page .tablas-container .tabla-jugadores table td,
+.basquetbol-page .tablas-container .tabla-posiciones table th,
+.basquetbol-page .tablas-container .tabla-posiciones table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+}
+.basquetbol-page .tablas-container .tabla-jugadores table th,
+.basquetbol-page .tablas-container .tabla-posiciones table th {
+  background-color: #ddd;
+}
+.basquetbol-page .tablas-container .tabla-jugadores table tr:nth-child(even),
+.basquetbol-page .tablas-container .tabla-posiciones table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+  main .selecciones-destacadas {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .selecciones-destacadas .selecciones {
+    width: 90%;
+  }
+  main .tabla-jugadores,
+  main .tabla-posiciones {
+    padding: 1rem;
+  }
+  main .tabla-jugadores table,
+  main .tabla-posiciones table {
+    font-size: 0.9rem;
+  }
+  main .tabla-jugadores table th,
+  main .tabla-jugadores table td,
+  main .tabla-posiciones table th,
+  main .tabla-posiciones table td {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  main .contenido {
+    padding: 1rem;
+  }
+  main .contenido h2 {
+    font-size: 1.2rem;
+  }
+  main .contenido ul {
+    font-size: 0.95rem;
+  }
+  main .slecciones-destacadas h2,
+  main .tabla-jugadores h2,
+  main .tabla-posiciones h2 {
+    font-size: 1.2rem;
+  }
+  main .tabla-jugadores table,
+  main .tabla-posiciones table {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 768px) {
+  main .tablas-container {
+    flex-direction: column;
+  }
+}
 .futbol-page main {
   padding: 2rem;
   display: flex;
@@ -227,28 +317,28 @@ footer .social-icons img:hover {
 .futbol-page main .contenido ul li {
   margin-bottom: 0.5rem;
 }
-.futbol-page main .jugadores-destacados {
+.futbol-page main .selecciones-destacadas {
   text-align: center;
 }
-.futbol-page main .jugadores-destacados .jugadores {
+.futbol-page main .selecciones-destacadas .selecciones {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-.futbol-page main .jugadores-destacados .jugadores .jugador {
+.futbol-page main .selecciones-destacadas .selecciones .seleccion {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   width: 200px;
 }
-.futbol-page main .jugadores-destacados .jugadores .jugador img {
+.futbol-page main .selecciones-destacadas .selecciones .seleccion img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
-.futbol-page main .jugadores-destacados .jugadores .jugador p {
+.futbol-page main .selecciones-destacadas .selecciones .seleccion p {
   font-size: 0.9rem;
   margin: 0;
 }
@@ -280,53 +370,92 @@ footer .social-icons img:hover {
 .futbol-page main .tabla-posiciones table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+.futbol-page .tablas-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.futbol-page .tablas-container .tabla-jugadores,
+.futbol-page .tablas-container .tabla-posiciones {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.futbol-page .tablas-container .tabla-jugadores table,
+.futbol-page .tablas-container .tabla-posiciones table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.futbol-page .tablas-container .tabla-jugadores table th,
+.futbol-page .tablas-container .tabla-jugadores table td,
+.futbol-page .tablas-container .tabla-posiciones table th,
+.futbol-page .tablas-container .tabla-posiciones table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+}
+.futbol-page .tablas-container .tabla-jugadores table th,
+.futbol-page .tablas-container .tabla-posiciones table th {
+  background-color: #ddd;
+}
+.futbol-page .tablas-container .tabla-jugadores table tr:nth-child(even),
+.futbol-page .tablas-container .tabla-posiciones table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
 @media (max-width: 768px) {
-  .futbol-page main {
+  main {
     padding: 1rem;
   }
-  .futbol-page main .jugadores-destacados .jugadores {
+  main .selecciones-destacadas {
     flex-direction: column;
     align-items: center;
   }
-  .futbol-page main .jugadores-destacados .jugadores .jugador {
+  main .selecciones-destacadas .selecciones {
     width: 90%;
   }
-  .futbol-page main .tabla-jugadores,
-  .futbol-page main .tabla-posiciones {
+  main .tabla-jugadores,
+  main .tabla-posiciones {
     padding: 1rem;
   }
-  .futbol-page main .tabla-jugadores table,
-  .futbol-page main .tabla-posiciones table {
+  main .tabla-jugadores table,
+  main .tabla-posiciones table {
     font-size: 0.9rem;
   }
-  .futbol-page main .tabla-jugadores table th,
-  .futbol-page main .tabla-jugadores table td,
-  .futbol-page main .tabla-posiciones table th,
-  .futbol-page main .tabla-posiciones table td {
+  main .tabla-jugadores table th,
+  main .tabla-jugadores table td,
+  main .tabla-posiciones table th,
+  main .tabla-posiciones table td {
     padding: 0.5rem;
   }
 }
 @media (max-width: 480px) {
-  .futbol-page main .contenido {
+  main .contenido {
     padding: 1rem;
   }
-  .futbol-page main .contenido h2 {
+  main .contenido h2 {
     font-size: 1.2rem;
   }
-  .futbol-page main .contenido ul {
+  main .contenido ul {
     font-size: 0.95rem;
   }
-  .futbol-page main .jugadores-destacados h2,
-  .futbol-page main .tabla-jugadores h2,
-  .futbol-page main .tabla-posiciones h2 {
+  main .slecciones-destacadas h2,
+  main .tabla-jugadores h2,
+  main .tabla-posiciones h2 {
     font-size: 1.2rem;
   }
-  .futbol-page main .tabla-jugadores table,
-  .futbol-page main .tabla-posiciones table {
+  main .tabla-jugadores table,
+  main .tabla-posiciones table {
     font-size: 0.85rem;
   }
 }
-
+@media (max-width: 768px) {
+  main .tablas-container {
+    flex-direction: column;
+  }
+}
 .login {
   max-width: 400px;
   margin: 50px auto;
