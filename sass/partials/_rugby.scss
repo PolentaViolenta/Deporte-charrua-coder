@@ -1,78 +1,181 @@
 .rugby-page {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
- 
-  section {
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 1000px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
-    h2 {
-      background-color: #0055aa;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
+    .contenido {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
 
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
+      h2 {
+        margin-top: 0;
+      }
 
-    .jugadores {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
+      ul {
+        margin-left: 1.5rem;
 
-      .jugador {
-        flex: 1 1 250px;
-        text-align: center;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        padding: 15px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-        img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin-bottom: 10px;
+        li {
+          margin-bottom: 0.5rem;
         }
       }
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
+    .selecciones-destacadas {
+      text-align: center;
 
-      th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
+      .selecciones {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .seleccion {
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 1rem;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          width: 200px;
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .tabla-jugadores,
+    .tabla-posiciones {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
         text-align: center;
-      }
 
-      th {
-        background-color: #d1fae5;
-        color: #065f46;
-        font-weight: bold;
-      }
+        th,
+        td {
+          border: 1px solid #ccc;
+          padding: 0.75rem;
+        }
 
-      tr:hover {
-        background-color: #f0fdf4;
+        th {
+          background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
       }
     }
   }
-}
+
+  .tablas-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+
+      .tabla-jugadores,
+      .tabla-posiciones {
+        flex: 1;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        overflow-x: auto;
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+
+          th,
+          td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+          }
+
+          th {
+            background-color: #ddd;
+          }
+
+          tr:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+
+      .selecciones-destacadas{
+        flex-direction: column;
+        align-items: center;
+          .selecciones{
+          width: 90%;
+        }
+      }
+
+      .tabla-jugadores,
+      .tabla-posiciones {
+        padding: 1rem;
+
+        table {
+          font-size: 0.9rem;
+
+          th,
+          td {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    main {
+      .contenido {
+        padding: 1rem;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          font-size: 0.95rem;
+        }
+      }
+
+      .selecciones-destacadas h2,
+      .tabla-jugadores h2,
+      .tabla-posiciones h2 {
+        font-size: 1.2rem;
+      }
+
+      .tabla-jugadores table,
+      .tabla-posiciones table {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    main {
+      .tablas-container {
+        flex-direction: column;
+      }
+    }
+  }
+
