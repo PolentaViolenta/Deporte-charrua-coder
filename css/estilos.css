@@ -188,6 +188,12 @@ footer .social-icons img:hover {
 .basquetbol-page main .selecciones-destacadas {
   text-align: center;
 }
+.basquetbol-page main .selecciones-destacadas h2 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
 .basquetbol-page main .selecciones-destacadas .selecciones {
   display: flex;
   justify-content: center;
@@ -316,7 +322,7 @@ footer .social-icons img:hover {
   text-align: center;
 }
 .futbol-page main .selecciones-destacadas h2 {
-  color: rgb(107, 107, 107);
+  color: rgb(0, 0, 0);
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
@@ -527,6 +533,12 @@ footer .social-icons img:hover {
 }
 .rugby-page main .selecciones-destacadas {
   text-align: center;
+}
+.rugby-page main .selecciones-destacadas h2 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 .rugby-page main .selecciones-destacadas .selecciones {
   display: flex;
