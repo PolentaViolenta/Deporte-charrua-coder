@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -18,23 +18,23 @@ html, body {
   color: #333;
 }
 
+.index-page {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+}
+
+// HEADER
 header {
   background-color: #0055aa;
-
-  h1 {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    font-size: 1.8rem;
-    color: #0055aa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
 
   nav {
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
       padding: 0 20px;
     }
@@ -57,13 +57,24 @@ header {
       }
     }
   }
+
+  h1 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    font-size: 1.8rem;
+    color: #0055aa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .botonlogo {
   height: 100px;
   object-fit: contain;
+  max-width: 100%;
 }
 
+// MAIN
 main {
   flex: 1;
   display: flex;
@@ -98,25 +109,30 @@ main {
   }
 }
 
+// FOOTER
 footer {
   align-items: center;
   background-color: #222;
   color: white;
   text-align: center;
   padding: 20px;
-  a{
+
+  a {
     text-decoration: none;
     color: white;
   }
-  li{
+
+  li {
     display: inline;
     margin-right: 15px;
   }
-  ul{
+
+  ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
+
   .social-icons {
     a {
       margin: 0 10px;
@@ -133,25 +149,53 @@ footer {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .main-menu img {
-    width: 90vw;
-    height: auto;
-  }
+// MEDIA QUERIES RESPONSIVE
 
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 768px) {
+  header {
+    h1 {
+      font-size: 1.4rem;
+      padding: 15px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+    }
   }
 
   .botonlogo {
     height: 70px;
   }
+
+  main {
+    padding: 10px;
+  }
+
+  .main-menu ul {
+    gap: 25px;
+  }
+
+  .main-menu img {
+    width: 80vw;
+    max-width: 250px;
+  }
 }
 
-.index-page {
-   background-color: transparent;
-   box-shadow: none;
-   padding: 0;
-   border: none;
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .botonlogo {
+    height: 60px;
+  }
+
+  .main-menu img {
+    width: 100%;
+    max-width: 220px;
+  }
 }

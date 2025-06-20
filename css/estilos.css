@@ -18,21 +18,21 @@ html, body {
   color: #333;
 }
 
+.index-page {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+}
+
 header {
   background-color: #0055aa;
-}
-header h1 {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  font-size: 1.8rem;
-  color: #0055aa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   padding: 0 20px;
 }
@@ -51,11 +51,20 @@ header nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 100px;
 }
+header h1 {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  font-size: 1.8rem;
+  color: #0055aa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .botonlogo {
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+  max-width: 100%;
 }
 
 main {
@@ -118,26 +127,44 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 600px) {
-  .main-menu img {
-    width: 90vw;
-    height: auto;
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+    padding: 15px;
   }
   header nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    padding: 10px 0;
   }
   .botonlogo {
     height: 70px;
   }
+  main {
+    padding: 10px;
+  }
+  .main-menu ul {
+    gap: 25px;
+  }
+  .main-menu img {
+    width: 80vw;
+    max-width: 250px;
+  }
 }
-.index-page {
-  background-color: transparent;
-  box-shadow: none;
-  padding: 0;
-  border: none;
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .botonlogo {
+    height: 60px;
+  }
+  .main-menu img {
+    width: 100%;
+    max-width: 220px;
+  }
 }
-
 .basquetbol-page main {
   padding: 2rem;
   display: flex;
@@ -183,120 +210,88 @@ footer .social-icons img:hover {
   font-size: 0.9rem;
   margin: 0;
 }
-.basquetbol-page main .tabla-jugadores,
-.basquetbol-page main .tabla-posiciones {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  overflow-x: auto;
-}
-.basquetbol-page main .tabla-jugadores table,
-.basquetbol-page main .tabla-posiciones table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-.basquetbol-page main .tabla-jugadores table th,
-.basquetbol-page main .tabla-jugadores table td,
-.basquetbol-page main .tabla-posiciones table th,
-.basquetbol-page main .tabla-posiciones table td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-}
-.basquetbol-page main .tabla-jugadores table th,
-.basquetbol-page main .tabla-posiciones table th {
-  background-color: #ddd;
-}
-.basquetbol-page main .tabla-jugadores table tr:nth-child(even),
-.basquetbol-page main .tabla-posiciones table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.basquetbol-page .tablas-container {
+.basquetbol-page main .tablas-container {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.basquetbol-page .tablas-container .tabla-jugadores,
-.basquetbol-page .tablas-container .tabla-posiciones {
+.basquetbol-page main .tablas-container .tabla-jugadores,
+.basquetbol-page main .tablas-container .tabla-posiciones {
   flex: 1;
+  min-width: 280px;
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 10px;
   overflow-x: auto;
 }
-.basquetbol-page .tablas-container .tabla-jugadores table,
-.basquetbol-page .tablas-container .tabla-posiciones table {
+.basquetbol-page main .tablas-container .tabla-jugadores table,
+.basquetbol-page main .tablas-container .tabla-posiciones table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
-.basquetbol-page .tablas-container .tabla-jugadores table th,
-.basquetbol-page .tablas-container .tabla-jugadores table td,
-.basquetbol-page .tablas-container .tabla-posiciones table th,
-.basquetbol-page .tablas-container .tabla-posiciones table td {
+.basquetbol-page main .tablas-container .tabla-jugadores table th,
+.basquetbol-page main .tablas-container .tabla-jugadores table td,
+.basquetbol-page main .tablas-container .tabla-posiciones table th,
+.basquetbol-page main .tablas-container .tabla-posiciones table td {
   border: 1px solid #ccc;
   padding: 0.75rem;
 }
-.basquetbol-page .tablas-container .tabla-jugadores table th,
-.basquetbol-page .tablas-container .tabla-posiciones table th {
+.basquetbol-page main .tablas-container .tabla-jugadores table th,
+.basquetbol-page main .tablas-container .tabla-posiciones table th {
   background-color: #ddd;
 }
-.basquetbol-page .tablas-container .tabla-jugadores table tr:nth-child(even),
-.basquetbol-page .tablas-container .tabla-posiciones table tr:nth-child(even) {
+.basquetbol-page main .tablas-container .tabla-jugadores table tr:nth-child(even),
+.basquetbol-page main .tablas-container .tabla-posiciones table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
 @media (max-width: 768px) {
-  main {
+  .basquetbol-page main {
     padding: 1rem;
   }
-  main .selecciones-destacadas {
+  .basquetbol-page main .selecciones-destacadas .selecciones {
     flex-direction: column;
     align-items: center;
   }
-  main .selecciones-destacadas .selecciones {
-    width: 90%;
+  .basquetbol-page main .tablas-container {
+    flex-direction: column;
+    gap: 1rem;
   }
-  main .tabla-jugadores,
-  main .tabla-posiciones {
+  .basquetbol-page main .tabla-jugadores,
+  .basquetbol-page main .tabla-posiciones {
     padding: 1rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .basquetbol-page main .tabla-jugadores table,
+  .basquetbol-page main .tabla-posiciones table {
     font-size: 0.9rem;
   }
-  main .tabla-jugadores table th,
-  main .tabla-jugadores table td,
-  main .tabla-posiciones table th,
-  main .tabla-posiciones table td {
+  .basquetbol-page main .tabla-jugadores table th,
+  .basquetbol-page main .tabla-jugadores table td,
+  .basquetbol-page main .tabla-posiciones table th,
+  .basquetbol-page main .tabla-posiciones table td {
     padding: 0.5rem;
   }
 }
 @media (max-width: 480px) {
-  main .contenido {
+  .basquetbol-page main .contenido {
     padding: 1rem;
   }
-  main .contenido h2 {
+  .basquetbol-page main .contenido h2 {
     font-size: 1.2rem;
   }
-  main .contenido ul {
+  .basquetbol-page main .contenido ul {
     font-size: 0.95rem;
   }
-  main .selecciones-destacadas h2,
-  main .tabla-jugadores h2,
-  main .tabla-posiciones h2 {
+  .basquetbol-page main h2 {
     font-size: 1.2rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .basquetbol-page main .tabla-jugadores table,
+  .basquetbol-page main .tabla-posiciones table {
     font-size: 0.85rem;
   }
 }
-@media (max-width: 768px) {
-  main .tablas-container {
-    flex-direction: column;
-  }
-}
+
 .futbol-page main {
   padding: 2rem;
   display: flex;
@@ -342,153 +337,168 @@ footer .social-icons img:hover {
   font-size: 0.9rem;
   margin: 0;
 }
-.futbol-page main .tabla-jugadores,
-.futbol-page main .tabla-posiciones {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  overflow-x: auto;
-}
-.futbol-page main .tabla-jugadores table,
-.futbol-page main .tabla-posiciones table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-.futbol-page main .tabla-jugadores table th,
-.futbol-page main .tabla-jugadores table td,
-.futbol-page main .tabla-posiciones table th,
-.futbol-page main .tabla-posiciones table td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-}
-.futbol-page main .tabla-jugadores table th,
-.futbol-page main .tabla-posiciones table th {
-  background-color: #ddd;
-}
-.futbol-page main .tabla-jugadores table tr:nth-child(even),
-.futbol-page main .tabla-posiciones table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.futbol-page .tablas-container {
+.futbol-page main .tablas-container {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.futbol-page .tablas-container .tabla-jugadores,
-.futbol-page .tablas-container .tabla-posiciones {
+.futbol-page main .tablas-container .tabla-jugadores,
+.futbol-page main .tablas-container .tabla-posiciones {
   flex: 1;
+  min-width: 280px;
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 10px;
   overflow-x: auto;
 }
-.futbol-page .tablas-container .tabla-jugadores table,
-.futbol-page .tablas-container .tabla-posiciones table {
+.futbol-page main .tablas-container .tabla-jugadores table,
+.futbol-page main .tablas-container .tabla-posiciones table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
-.futbol-page .tablas-container .tabla-jugadores table th,
-.futbol-page .tablas-container .tabla-jugadores table td,
-.futbol-page .tablas-container .tabla-posiciones table th,
-.futbol-page .tablas-container .tabla-posiciones table td {
+.futbol-page main .tablas-container .tabla-jugadores table th,
+.futbol-page main .tablas-container .tabla-jugadores table td,
+.futbol-page main .tablas-container .tabla-posiciones table th,
+.futbol-page main .tablas-container .tabla-posiciones table td {
   border: 1px solid #ccc;
   padding: 0.75rem;
 }
-.futbol-page .tablas-container .tabla-jugadores table th,
-.futbol-page .tablas-container .tabla-posiciones table th {
+.futbol-page main .tablas-container .tabla-jugadores table th,
+.futbol-page main .tablas-container .tabla-posiciones table th {
   background-color: #ddd;
 }
-.futbol-page .tablas-container .tabla-jugadores table tr:nth-child(even),
-.futbol-page .tablas-container .tabla-posiciones table tr:nth-child(even) {
+.futbol-page main .tablas-container .tabla-jugadores table tr:nth-child(even),
+.futbol-page main .tablas-container .tabla-posiciones table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
 @media (max-width: 768px) {
-  main {
+  .futbol-page main {
     padding: 1rem;
   }
-  main .selecciones-destacadas {
+  .futbol-page main .selecciones-destacadas .selecciones {
     flex-direction: column;
     align-items: center;
   }
-  main .selecciones-destacadas .selecciones {
-    width: 90%;
+  .futbol-page main .tablas-container {
+    flex-direction: column;
+    gap: 1rem;
   }
-  main .tabla-jugadores,
-  main .tabla-posiciones {
+  .futbol-page main .tabla-jugadores,
+  .futbol-page main .tabla-posiciones {
     padding: 1rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .futbol-page main .tabla-jugadores table,
+  .futbol-page main .tabla-posiciones table {
     font-size: 0.9rem;
   }
-  main .tabla-jugadores table th,
-  main .tabla-jugadores table td,
-  main .tabla-posiciones table th,
-  main .tabla-posiciones table td {
+  .futbol-page main .tabla-jugadores table th,
+  .futbol-page main .tabla-jugadores table td,
+  .futbol-page main .tabla-posiciones table th,
+  .futbol-page main .tabla-posiciones table td {
     padding: 0.5rem;
   }
 }
 @media (max-width: 480px) {
-  main .contenido {
+  .futbol-page main .contenido {
     padding: 1rem;
   }
-  main .contenido h2 {
+  .futbol-page main .contenido h2 {
     font-size: 1.2rem;
   }
-  main .contenido ul {
+  .futbol-page main .contenido ul {
     font-size: 0.95rem;
   }
-  main .selecciones-destacadas h2,
-  main .tabla-jugadores h2,
-  main .tabla-posiciones h2 {
+  .futbol-page main h2 {
     font-size: 1.2rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .futbol-page main .tabla-jugadores table,
+  .futbol-page main .tabla-posiciones table {
     font-size: 0.85rem;
   }
 }
-@media (max-width: 768px) {
-  main .tablas-container {
-    flex-direction: column;
-  }
-}
+
 .login {
   max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .login h2 {
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 .login p {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  color: #555;
 }
-.login input, .login button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.login button {
-  background-color: #3498db;
+.login form label {
+  font-weight: 600;
+  text-align: left;
+  color: #333;
+}
+.login form input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.login form input:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0, 119, 204, 0.6);
+}
+.login form button {
+  padding: 0.75rem;
+  background-color: #0077cc;
   color: white;
+  font-weight: 700;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 119, 204, 0.4);
 }
-.login button:hover {
-  background-color: #2980b9;
+.login form button:hover {
+  background-color: #005fa3;
+  box-shadow: 0 6px 12px rgba(0, 95, 163, 0.6);
+}
+.login a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login a:hover {
+  text-decoration: underline;
 }
 
+@media (max-width: 600px) {
+  .login {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  .login h2 {
+    font-size: 1.5rem;
+  }
+  .login form input, .login form button {
+    font-size: 1rem;
+  }
+}
 .rugby-page main {
   padding: 2rem;
   display: flex;
@@ -534,117 +544,84 @@ footer .social-icons img:hover {
   font-size: 0.9rem;
   margin: 0;
 }
-.rugby-page main .tabla-jugadores,
-.rugby-page main .tabla-posiciones {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  overflow-x: auto;
-}
-.rugby-page main .tabla-jugadores table,
-.rugby-page main .tabla-posiciones table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-.rugby-page main .tabla-jugadores table th,
-.rugby-page main .tabla-jugadores table td,
-.rugby-page main .tabla-posiciones table th,
-.rugby-page main .tabla-posiciones table td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-}
-.rugby-page main .tabla-jugadores table th,
-.rugby-page main .tabla-posiciones table th {
-  background-color: #ddd;
-}
-.rugby-page main .tabla-jugadores table tr:nth-child(even),
-.rugby-page main .tabla-posiciones table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.rugby-page .tablas-container {
+.rugby-page main .tablas-container {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.rugby-page .tablas-container .tabla-jugadores,
-.rugby-page .tablas-container .tabla-posiciones {
+.rugby-page main .tablas-container .tabla-jugadores,
+.rugby-page main .tablas-container .tabla-posiciones {
   flex: 1;
+  min-width: 280px;
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 10px;
   overflow-x: auto;
 }
-.rugby-page .tablas-container .tabla-jugadores table,
-.rugby-page .tablas-container .tabla-posiciones table {
+.rugby-page main .tablas-container .tabla-jugadores table,
+.rugby-page main .tablas-container .tabla-posiciones table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
-.rugby-page .tablas-container .tabla-jugadores table th,
-.rugby-page .tablas-container .tabla-jugadores table td,
-.rugby-page .tablas-container .tabla-posiciones table th,
-.rugby-page .tablas-container .tabla-posiciones table td {
+.rugby-page main .tablas-container .tabla-jugadores table th,
+.rugby-page main .tablas-container .tabla-jugadores table td,
+.rugby-page main .tablas-container .tabla-posiciones table th,
+.rugby-page main .tablas-container .tabla-posiciones table td {
   border: 1px solid #ccc;
   padding: 0.75rem;
 }
-.rugby-page .tablas-container .tabla-jugadores table th,
-.rugby-page .tablas-container .tabla-posiciones table th {
+.rugby-page main .tablas-container .tabla-jugadores table th,
+.rugby-page main .tablas-container .tabla-posiciones table th {
   background-color: #ddd;
 }
-.rugby-page .tablas-container .tabla-jugadores table tr:nth-child(even),
-.rugby-page .tablas-container .tabla-posiciones table tr:nth-child(even) {
+.rugby-page main .tablas-container .tabla-jugadores table tr:nth-child(even),
+.rugby-page main .tablas-container .tabla-posiciones table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
 @media (max-width: 768px) {
-  main {
+  .rugby-page main {
     padding: 1rem;
   }
-  main .selecciones-destacadas {
+  .rugby-page main .selecciones-destacadas .selecciones {
     flex-direction: column;
     align-items: center;
   }
-  main .selecciones-destacadas .selecciones {
-    width: 90%;
+  .rugby-page main .tablas-container {
+    flex-direction: column;
+    gap: 1rem;
   }
-  main .tabla-jugadores,
-  main .tabla-posiciones {
+  .rugby-page main .tabla-jugadores,
+  .rugby-page main .tabla-posiciones {
     padding: 1rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .rugby-page main .tabla-jugadores table,
+  .rugby-page main .tabla-posiciones table {
     font-size: 0.9rem;
   }
-  main .tabla-jugadores table th,
-  main .tabla-jugadores table td,
-  main .tabla-posiciones table th,
-  main .tabla-posiciones table td {
+  .rugby-page main .tabla-jugadores table th,
+  .rugby-page main .tabla-jugadores table td,
+  .rugby-page main .tabla-posiciones table th,
+  .rugby-page main .tabla-posiciones table td {
     padding: 0.5rem;
   }
 }
 @media (max-width: 480px) {
-  main .contenido {
+  .rugby-page main .contenido {
     padding: 1rem;
   }
-  main .contenido h2 {
+  .rugby-page main .contenido h2 {
     font-size: 1.2rem;
   }
-  main .contenido ul {
+  .rugby-page main .contenido ul {
     font-size: 0.95rem;
   }
-  main .selecciones-destacadas h2,
-  main .tabla-jugadores h2,
-  main .tabla-posiciones h2 {
+  .rugby-page main h2 {
     font-size: 1.2rem;
   }
-  main .tabla-jugadores table,
-  main .tabla-posiciones table {
+  .rugby-page main .tabla-jugadores table,
+  .rugby-page main .tabla-posiciones table {
     font-size: 0.85rem;
-  }
-}
-@media (max-width: 768px) {
-  main .tablas-container {
-    flex-direction: column;
   }
 }/*# sourceMappingURL=estilos.css.map */
