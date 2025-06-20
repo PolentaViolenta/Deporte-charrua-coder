@@ -315,6 +315,12 @@ footer .social-icons img:hover {
 .futbol-page main .selecciones-destacadas {
   text-align: center;
 }
+.futbol-page main .selecciones-destacadas h2 {
+  color: rgb(107, 107, 107);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
 .futbol-page main .selecciones-destacadas .selecciones {
   display: flex;
   justify-content: center;
